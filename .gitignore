@@ -3,4 +3,5 @@
 __pycache__
 .ipynb_checkpoints
 *.xlsx
+*.json
 .DS_Store
