@@ -51,5 +51,8 @@ df = civil_pending_notes.append(pd.DataFrame(pending_cause_number_df, columns=['
     #resets the index and drops the output index
     #fills in the na with an empty space to avoid error
 df = df.drop_duplicates('cause_number').reset_index(drop=True).fillna(' ')
-    #updates the google sheet with the new list of pending cases
-civil_pending_notes.update([df.columns.values.tolist()] + df.values.tolist())
+
+#Clears the google spreadsheet for the update
+civil_pending_notes_tab.clear()
+#updates the google sheet with the new list of pending cases
+civil_pending_notes_tab.update([df.columns.values.tolist()] + df.values.tolist())
