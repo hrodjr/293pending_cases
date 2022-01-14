@@ -11,7 +11,7 @@ import df2gspread as d2g
 """ Put this in a function"""
 #opens the google sheet of pending case notes
     #sets the json to service account path
-json_path = gspread.service_account(filename = '/Users/hector/codeup-data-science/pending_cases/pending_cases.json')
+json_path = gspread.service_account(filename = '/Users/hector/codeup-data-science/293pending_cases/pending_cases.json')
     #opens the google sheet by key found in the address
 opens_civil_pending_gs = json_path.open_by_key('1b3fmZrbfwZWMvu4kUGJSSGsp61utlE0Ny-ebozZ5aBk')
     #pulls the data from the google worksheet (civil_pending_notes tab)
